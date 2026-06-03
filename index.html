@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Jithin George & Jenny Rosa Betrothal — 4 July 2026 ✨</title>
+
+  <meta name="description" content="Cordially invite your esteemed presence and blessings of the Betrothal Ceremony of our beloved Daughter on 4th July 2026 at 11.00 am." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Great+Vibes&family=Lato:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&family=Parisienne&display=swap"
+    rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8d5a3;
+      --cream: #fdf8f0;
+      --dark: #2c2416;
+      --text: #4a3f2f;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: "Lato", sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ================= PETALS ================= */
+
+    .petals-container {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .petal {
+      position: absolute;
+      top: -40px;
+      width: 12px;
+      height: 16px;
+      background: radial-gradient(ellipse at 40% 30%,
+          #f9c8d4,
+          #e8a0b0 60%,
+          #d4607a);
+      border-radius: 50% 0 50% 0;
+      opacity: 0.7;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg) translateX(0);
+        opacity: 0.8;
+      }
+
+      50% {
+        transform: translateY(50vh) rotate(180deg) translateX(30px);
+      }
+
+      100% {
+        transform: translateY(110vh) rotate(360deg) translateX(-20px);
+        opacity: 0;
+      }
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+      overflow: hidden;
+
+      background:
+        linear-gradient(rgba(255, 255, 255, 0.1),
+          rgba(255, 255, 255, 0.1)),
+        url("couple.png");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      z-index: 0;
+    }
+
+    .hero-border {
+      position: absolute;
+      inset: 20px;
+      border: 1px solid rgba(201, 168, 76, 0.2);
+      border-radius: 16px;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-border::before,
+    .hero-border::after {
+      content: "✦";
+      position: absolute;
+      color: var(--gold);
+      font-size: 18px;
+    }
+
+    .hero-border::before {
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .hero-border::after {
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      background: rgba(255, 255, 255, 0.4);
+      padding: 50px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+    }
+
+    .bismillah {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      color: var(--dark);
+      text-transform: uppercase;
+      margin-bottom: 26px;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 18px;
+      color: var(--gold);
+    }
+
+    .ornament-line {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold));
+    }
+
+    .ornament-line.right {
+      background: linear-gradient(to left, transparent, var(--gold));
+    }
+
+    .together {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      opacity: 0.8;
+      margin-bottom: 12px;
+    }
+
+    .names {
+      font-family: "Parisienne", cursive;
+      font-size: clamp(68px, 15vw, 130px);
+      color: var(--dark);
+      line-height: 1;
+      text-shadow:
+        0 2px 12px rgba(255, 255, 255, 0.65),
+        0 4px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .names .and {
+      display: block;
+      font-size: clamp(42px, 8vw, 72px);
+      color: var(--gold);
+    }
+
+    .date-badge {
+      margin: 32px auto;
+      display: inline-block;
+      border: 1px solid var(--gold);
+      border-radius: 8px;
+      padding: 14px 36px;
+      position: relative;
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(4px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .date-badge::before,
+    .date-badge::after {
+      content: "◆";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gold);
+      font-size: 10px;
+    }
+
+    .date-badge::before {
+      left: -8px;
+    }
+
+    .date-badge::after {
+      right: -8px;
+    }
+
+    .day {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(42px, 8vw, 60px);
+      line-height: 1;
+      color: var(--dark);
+    }
+
+    .month-year {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 16px;
+      letter-spacing: 4px;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+
+    .scroll-hint {
+      margin-top: 44px;
+      opacity: 0.6;
+      animation: bounce 2s infinite;
+    }
+
+    .scroll-hint span {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .scroll-hint svg {
+      width: 20px;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(6px);
+      }
+    }
+
+    /* ================= SECTION ================= */
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(40px, 8vw, 62px);
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 14px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .divider {
+      margin: 16px 0;
+      color: var(--gold);
+    }
+
+    /* ================= COUNTDOWN ================= */
+
+    .countdown-section {
+      background: linear-gradient(135deg, #2c2416 0%, #3d3020 100%);
+      max-width: 100%;
+      padding: 70px 20px;
+    }
+
+    .countdown-section .section-title h2 {
+      color: var(--gold-light);
+    }
+
+    .countdown-grid {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .countdown-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(232, 213, 163, 0.15);
+      border-radius: 12px;
+      padding: 20px 15px;
+      text-align: center;
+      min-width: 110px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(4px);
+    }
+
+    .num {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(46px, 10vw, 72px);
+      color: var(--gold);
+      display: block;
+      line-height: 1;
+    }
+
+    .label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(232, 213, 163, 0.7);
+      margin-top: 6px;
+    }
+
+    /* ================= EVENTS ================= */
+
+    .events-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .event-card {
+      background: white;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 40px 30px;
+      text-align: center;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .event-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(201, 168, 76, 0.2);
+    }
+
+    .event-card::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(201, 168, 76, 0.4);
+      border-radius: 8px;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .event-icon {
+      font-size: 34px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .event-card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+      margin-bottom: 12px;
+      color: var(--dark);
+    }
+
+    .event-time {
+      color: var(--gold);
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+      font-size: 14px;
+    }
+
+    .event-card p {
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .map-btn {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 12px 28px;
+      border: 1px solid var(--gold);
+      border-radius: 30px;
+      text-decoration: none;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+      background: transparent;
+    }
+
+    .map-btn:hover {
+      background: var(--gold);
+      color: white;
+      box-shadow: 0 4px 15px rgba(201, 168, 76, 0.4);
+    }
+
+    /* ================= QUOTE ================= */
+
+    .quote-section {
+      text-align: center;
+      background: linear-gradient(135deg, #fdf3e7, #fce8d5);
+      max-width: 100%;
+      padding: 70px 20px;
+    }
+
+    .quote-section blockquote {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: clamp(22px, 4vw, 30px);
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.8;
+      color: var(--dark);
+    }
+
+    .quote-section cite {
+      display: block;
+      margin-top: 18px;
+      letter-spacing: 3px;
+      color: var(--gold);
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+
+    /* ================= RSVP ================= */
+
+    .rsvp-section {
+      text-align: center;
+    }
+
+    .rsvp-section p {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 20px;
+      line-height: 1.9;
+      margin-bottom: 34px;
+    }
+
+    .rsvp-btn {
+      display: inline-block;
+      padding: 16px 42px;
+      background: var(--gold);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 6px 20px rgba(201, 168, 76, 0.3);
+    }
+
+    .rsvp-btn:hover {
+      background: #b8922e;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(201, 168, 76, 0.4);
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: var(--dark);
+      color: rgba(232, 213, 163, 0.6);
+      text-align: center;
+      padding: 42px 20px;
+    }
+
+    .footer-names {
+      font-family: "Great Vibes", cursive;
+      color: var(--gold);
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    /* ================= MUSIC BUTTON ================= */
+
+    #music-btn {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 999;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: none;
+      cursor: pointer;
+      font-size: 22px;
+      box-shadow: 0 4px 16px rgba(201, 168, 76, 0.45);
+      transition: background 0.3s, transform 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #music-btn:hover {
+      background: #b8922e;
+      transform: scale(1.1);
+    }
+
+    /* ================= ANIMATION ================= */
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- BACKGROUND MUSIC -->
+  <audio id="bg-music" src="song.mp3" loop></audio>
+  <button id="music-btn" title="Toggle music">🎵</button>
+
+  <!-- PETALS -->
+  <div class="petals-container" id="petals"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-border"></div>
+
+    <div class="hero-content">
+
+      <p class="bismillah fade-in">
+        Together Forever
+      </p>
+
+      <div class="ornament fade-in">
+        <span class="ornament-line"></span>
+        ✦
+        <span class="ornament-line right"></span>
+      </div>
+
+      <p class="together fade-in">
+        Betrothal Ceremony
+      </p>
+
+      <h1 class="names fade-in">
+        Jithin
+        <span class="and">&amp;</span>
+        Jenny
+      </h1>
+
+      <div class="date-badge fade-in">
+        <div class="day">4</div>
+        <div class="month-year">
+          July · 2026
+        </div>
+      </div>
+
+      <p class="together fade-in" style="letter-spacing:2px;">
+        Saturday · 11.00 am · St. Sebastian's Church, Bolgatty
+      </p>
+
+      <div class="scroll-hint fade-in">
+
+        <span>Scroll</span>
+
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- COUNTDOWN -->
+  <div class="countdown-section">
+
+    <div class="section-title fade-in">
+      <h2>Counting Down</h2>
+      <div class="divider">✦</div>
+      <p class="subtitle">Until The Betrothal Ceremony</p>
+    </div>
+
+    <div class="countdown-grid fade-in">
+
+      <div class="countdown-item">
+        <span class="num" id="cd-days">000</span>
+        <span class="label">Days</span>
+      </div>
+
+      <div class="countdown-item">
+        <span class="num" id="cd-hours">00</span>
+        <span class="label">Hours</span>
+      </div>
+
+      <div class="countdown-item">
+        <span class="num" id="cd-mins">00</span>
+        <span class="label">Minutes</span>
+      </div>
+
+      <div class="countdown-item">
+        <span class="num" id="cd-secs">00</span>
+        <span class="label">Seconds</span>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- EVENTS -->
+  <section>
+
+    <div class="section-title fade-in">
+
+      <h2>The Ceremony</h2>
+
+      <div class="divider">✦</div>
+
+      <p class="subtitle">
+        Your Presence And Blessings Are Requested
+      </p>
+
+    </div>
+
+    <div class="events-grid" style="display: flex; justify-content: center;">
+
+      <div class="event-card fade-in" style="max-width: 480px; width: 100%;">
+
+        <span class="event-icon">💍</span>
+
+        <h3>Betrothal Ceremony</h3>
+
+        <p class="event-time">
+          On Saturday 4th July 2026 @ 11.00 am
+        </p>
+
+        <div
+          style="margin: 24px 0; padding: 20px; background: rgba(201, 168, 76, 0.05); border-radius: 12px; border: 1px dashed rgba(201, 168, 76, 0.4);">
+          <p style="margin-bottom: 16px; line-height: 1.4;">
+            <strong
+              style="color: var(--dark); font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 1px;">Betrothal Ceremony</strong><br>
+            <span style="color: var(--gold); font-size: 15px; font-weight: 600; letter-spacing: 1px;">11.00 am</span>
+          </p>
+          <p style="line-height: 1.4;">
+            <strong
+              style="color: var(--dark); font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 1px;">Lunch</strong><br>
+            <span style="color: var(--gold); font-size: 15px; font-weight: 600; letter-spacing: 1px;">There after lunch at parish hall</span>
+          </p>
+        </div>
+
+        <p>
+          St. Sebastian's Church, Bolgatty<br>
+          Kurishinkal Road, Mulavukad<br>
+          Kochi, Ernakulam, Kerala 682504
+        </p>
+
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=X7W7%2B4R7%20St%20Sebastian%27s%20Church%2C%20Bolgatty%2C%20Kurishinkal%20Road%2C%20Mulavukad%2C%20Kochi%2C%20Ernakulam%2C%20Kerala%20682504" target="_blank" class="map-btn">
+          Venue Location
+        </a>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- QUOTE -->
+  <div class="quote-section fade-in">
+
+    <blockquote>
+      “Cordially invite your esteemed presence and blessings of the Betrothal Ceremony of our beloved Daughter”
+    </blockquote>
+
+    <cite>
+      On Saturday 4th July 2026 @ 11.00 am
+    </cite>
+
+  </div>
+
+  <!-- RSVP -->
+  <section class="rsvp-section">
+
+    <div class="section-title fade-in">
+
+      <h2>Join Our Joy</h2>
+
+      <div class="divider">✦</div>
+
+      <p class="subtitle">
+        Your Presence Means Everything
+      </p>
+
+    </div>
+
+    <p class="fade-in">
+      Cordially invite your esteemed presence and blessings of the Betrothal Ceremony of our beloved Daughter.<br>
+      At. St.Sebastian's church, Bolgatty<br>
+      There after lunch at parish hall
+    </p>
+
+    <a href="https://wa.me/?text=I%20will%20attend%20the%20Betrothal%20Ceremony%20of%20Jithin%20George%20and%20Jenny%20Rosa%20on%204th%20July%202026%20at%2011.00%20am"
+      target="_blank" class="rsvp-btn fade-in">
+      💌 Send Wishes
+    </a>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-names">
+      Jithin George & Jenny Rosa
+    </div>
+
+    <p>
+      Saturday · 4th July 2026 · 11.00 am · St. Sebastian's Church, Bolgatty
+    </p>
+
+    <p style="margin-top:10px; opacity:0.5;">
+      Made with ❤️ for the Betrothal Ceremony
+    </p>
+
+  </footer>
+
+  <script>
+
+    // MUSIC
+    const audio = document.getElementById("bg-music");
+    const btn = document.getElementById("music-btn");
+    let playing = false;
+
+    btn.addEventListener("click", () => {
+      if (playing) {
+        audio.pause();
+        btn.textContent = "🔇";
+      } else {
+        audio.play();
+        btn.textContent = "🎵";
+      }
+      playing = !playing;
+    });
+
+    // Auto-play on first user interaction with the page
+    document.addEventListener("click", function startMusic() {
+      if (!playing) {
+        audio.play();
+        btn.textContent = "🎵";
+        playing = true;
+      }
+      document.removeEventListener("click", startMusic);
+    }, { once: true });
+
+    // PETALS
+
+    const container = document.getElementById("petals");
+
+    for (let i = 0; i < 18; i++) {
+
+      const p = document.createElement("div");
+
+      p.className = "petal";
+
+      p.style.left = Math.random() * 100 + "vw";
+
+      p.style.animationDuration =
+        6 + Math.random() * 8 + "s";
+
+      p.style.animationDelay =
+        Math.random() * 10 + "s";
+
+      p.style.opacity =
+        0.4 + Math.random() * 0.5;
+
+      container.appendChild(p);
+    }
+
+    // COUNTDOWN
+
+    const betrothal = new Date("2026-07-04T11:00:00");
+
+    function updateCountdown() {
+
+      const now = new Date();
+
+      const diff = betrothal - now;
+
+      if (diff <= 0) return;
+
+      const d =
+        Math.floor(diff / 86400000);
+
+      const h =
+        Math.floor((diff % 86400000) / 3600000);
+
+      const m =
+        Math.floor((diff % 3600000) / 60000);
+
+      const s =
+        Math.floor((diff % 60000) / 1000);
+
+      document.getElementById("cd-days").textContent =
+        String(d).padStart(3, "0");
+
+      document.getElementById("cd-hours").textContent =
+        String(h).padStart(2, "0");
+
+      document.getElementById("cd-mins").textContent =
+        String(m).padStart(2, "0");
+
+      document.getElementById("cd-secs").textContent =
+        String(s).padStart(2, "0");
+    }
+
+    updateCountdown();
+
+    setInterval(updateCountdown, 1000);
+
+    // FADE IN
+
+    const observer =
+      new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+          }
+
+        });
+
+      }, {
+        threshold: 0.15
+      });
+
+    document
+      .querySelectorAll(".fade-in")
+      .forEach(el => observer.observe(el));
+
+  </script>
+
+</body>
+
+</html>
