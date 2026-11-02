@@ -576,7 +576,7 @@
 <body>
 
   <!-- BACKGROUND MUSIC -->
-  <audio id="bg-music" src="song.mp3" loop autoplay></audio>
+  <audio id="bg-music" src="song.mp3" loop autoplay muted playsinline></audio>
   <button id="music-btn" title="Toggle music">🎵</button>
 
   <!-- PETALS -->
@@ -798,6 +798,7 @@
     async function startMusic() {
       try {
         await audio.play();
+        audio.muted = false;
       } catch (error) {
         // Browsers may block autoplay until the first user interaction.
       }
