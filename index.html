@@ -576,7 +576,7 @@
 <body>
 
   <!-- BACKGROUND MUSIC -->
-  <audio id="bg-music" src="song.mp3" loop></audio>
+  <audio id="bg-music" src="song.mp3" loop autoplay></audio>
   <button id="music-btn" title="Toggle music">🎵</button>
 
   <!-- PETALS -->
@@ -795,26 +795,44 @@
     const btn = document.getElementById("music-btn");
     let playing = false;
 
-    btn.addEventListener("click", () => {
-      if (playing) {
-        audio.pause();
-        btn.textContent = "🔇";
-      } else {
-        audio.play();
-        btn.textContent = "🎵";
+    async function startMusic() {
+      try {
+        await audio.play();
+      } catch (error) {
+        // Browsers may block autoplay until the first user interaction.
       }
-      playing = !playing;
+    }
+
+    function updateMusicButton() {
+      playing = !audio.paused;
+      btn.textContent = playing ? "🎵" : "🔇";
+      btn.title = playing ? "Mute music" : "Play music";
+    }
+
+    btn.addEventListener("click", async () => {
+      if (playing || !audio.paused) {
+        audio.pause();
+      } else {
+        await startMusic();
+      }
+      updateMusicButton();
     });
 
-    // Auto-play on first user interaction with the page
-    document.addEventListener("click", function startMusic() {
+    audio.addEventListener("play", updateMusicButton);
+    audio.addEventListener("pause", updateMusicButton);
+
+    // Try to start immediately, and retry after the first page interaction if
+    // the browser blocks automatic playback.
+    startMusic();
+    document.addEventListener("click", function startMusicOnInteraction(event) {
+      if (event.target.closest("#music-btn")) return;
       if (!playing) {
-        audio.play();
-        btn.textContent = "🎵";
-        playing = true;
+        startMusic();
       }
-      document.removeEventListener("click", startMusic);
-    }, { once: true });
+      if (playing) {
+        document.removeEventListener("click", startMusicOnInteraction);
+      }
+    });
 
     // PETALS
 
